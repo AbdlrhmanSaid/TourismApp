@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Aboutus = () => {
   return (
@@ -16,7 +17,9 @@ const Aboutus = () => {
             partners and places spread all over the world by prioriti-zing
             service and customer satisfaction.
           </p>
-          <button className="btn mb-3">Learn More</button>
+          <Link href={"/Servecies"} className="btn w-fit my-6 block">
+            Learn More
+          </Link>
           <div className="md:flex justify-between hidden items-center mt-3 text-center">
             <h1>
               <p className="text-orange-fade text-3xl font-bold">200+</p>

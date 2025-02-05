@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { MapPin, Star } from "lucide-react";
 
-const Card = ({ img, country, text, time, price, color }) => {
+const Card = ({ img, country, text, time, price }) => {
   return (
     <div className="w-full mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
       <img src={img} alt="Tour Image" className="w-full h-48 object-cover" />

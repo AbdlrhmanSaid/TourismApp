@@ -1,20 +1,29 @@
 "use client";
 import { useState } from "react";
+const Filter = ({ setActiveFilter }) => {
+  const filters = [
+    "All",
+    "Special Deals",
+    "Populer",
+    "Recommendation",
+    "Best Price",
+  ];
+  const [activeFilter, setFilter] = useState("All");
 
-const Filter = () => {
-  const [activeFilter, setActiveFilter] = useState("Special Deals");
-
-  const filters = ["Special Deals", "Populer", "Recommendation", "Best Price"];
+  const handleFilterClick = (filter) => {
+    setActiveFilter(filter);
+    setFilter(filter);
+  };
 
   return (
-    <div className=" text-center p-4 my-[20px] text-[13px] md:text-[16px]">
+    <div className="text-center p-4 my-[20px] text-[13px] md:text-[16px]">
       <div className="flex justify-center space-x-8 px-4">
         {filters.map((filter) => (
           <div
             key={filter}
-            onClick={() => setActiveFilter(filter)}
-            className={`cursor-pointer text-gray-600 relative  ${
-              activeFilter === filter ? "text-black  font-bold" : ""
+            onClick={() => handleFilterClick(filter)}
+            className={`cursor-pointer text-gray-600 relative ${
+              activeFilter === filter ? "text-black font-bold" : ""
             }`}
           >
             {filter}

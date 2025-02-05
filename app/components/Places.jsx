@@ -1,7 +1,12 @@
+"use client";
 import Filter from "./Filter";
 import Card from "./Card";
 import Link from "next/link";
+import { useState } from "react";
+
 const Places = () => {
+  const [activeFilter, setActiveFilter] = useState("All");
+
   const placesCard = [
     {
       img: "/place1.png",
@@ -9,6 +14,7 @@ const Places = () => {
       text: "Hurawalhi Island",
       time: "7 Days Tour on 2 person",
       price: 620,
+      category: "Special Deals",
     },
     {
       img: "/place2.png",
@@ -16,6 +22,7 @@ const Places = () => {
       text: "Bali Province",
       time: "4 days 2 person",
       price: 780,
+      category: "Populer",
     },
     {
       img: "/place3.png",
@@ -23,6 +30,7 @@ const Places = () => {
       text: "Barcelona city beach",
       time: "4 days 4 person",
       price: 850,
+      category: "Recommendation",
     },
     {
       img: "/place4.png",
@@ -30,6 +38,7 @@ const Places = () => {
       text: "Hurawalhi Island",
       time: "7 Days Tour on 2 person",
       price: 620,
+      category: "Special Deals",
     },
     {
       img: "/place5.png",
@@ -37,20 +46,23 @@ const Places = () => {
       text: "St. John's",
       time: "7 Days Tour on 2 person",
       price: 620,
+      category: "Best Price",
     },
     {
       img: "/place6.png",
-      country: "Maldives",
+      country: "Peru",
       text: "Machu Picchu",
       time: "7 Days Tour on 2 person",
       price: 820,
+      category: "Recommendation",
     },
     {
       img: "/place7.png",
-      country: "French",
+      country: "French Polynesia",
       text: "Bora Bora Island",
       time: "7 Days Tour on 2 person",
       price: 550,
+      category: "Populer",
     },
     {
       img: "/place8.png",
@@ -58,18 +70,25 @@ const Places = () => {
       text: "Sydney Opera House",
       time: "7 Days Tour on 2 person",
       price: 310,
+      category: "Best Price",
     },
   ];
+
+  const filteredPlaces =
+    activeFilter === "All"
+      ? placesCard
+      : placesCard.filter((place) => place.category === activeFilter);
+
   return (
     <div className="my-[20px] px-3" id="tour-packages">
       <div className="bg-[url('/plans.png')]">
-        <h1 className="text-center  text-[54px] font-bold">
+        <h1 className="text-center text-[54px] font-bold">
           The <span className="text-orange">best place for</span> vacation
         </h1>
-        <Filter />
+        <Filter setActiveFilter={setActiveFilter} />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
-        {placesCard.map((place, index) => (
+        {filteredPlaces.map((place, index) => (
           <Card
             key={index}
             img={place.img}
@@ -77,7 +96,6 @@ const Places = () => {
             text={place.text}
             time={place.time}
             price={place.price}
-            color={place.color}
           />
         ))}
       </div>
