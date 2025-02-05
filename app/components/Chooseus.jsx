@@ -14,7 +14,7 @@ const Chooseus = () => {
           a price you can afford.
         </p>
 
-        <Link className="btn mt-6" href={"/Servecies"}>
+        <Link className="btn mt-8 mx-auto block w-fit" href={"/Servecies"}>
           Learn More
         </Link>
       </div>

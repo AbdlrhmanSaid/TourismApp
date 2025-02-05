@@ -5,17 +5,17 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-orange-light py-8">
+    <footer className="bg-orange-light py-8 px-4 text-center md:text-left">
       <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-8">
         <div className="sm:col-span-2">
-          <div className="flex items-center mb-4">
+          <div className="flex items-center justify-center md:justify-start mb-4">
             <Image src={logo} alt="logo" width={102} height={40} />
           </div>
           <p className="text-gray text-sm md:text-base">
             We believe brand interaction is key in communication. Real
             innovations and a positive.
           </p>
-          <div className="flex space-x-4 mt-4">
+          <div className="flex space-x-4 justify-center md:justify-start mt-4">
             <Twitter className="text-orange cursor-pointer" />
             <Instagram className="text-orange cursor-pointer" />
             <Youtube className="text-orange cursor-pointer" />

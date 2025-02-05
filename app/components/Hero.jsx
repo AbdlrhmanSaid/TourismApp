@@ -1,5 +1,8 @@
 import Image from "next/image";
 import SearchBar from "./SearchBar";
+import { Plane } from "lucide-react";
+import Link from "next/link";
+
 const Hero = () => {
   return (
     <div className="mb-6">
@@ -15,10 +18,14 @@ const Hero = () => {
             Time Tracking Software Used By Millions. A Simple Time Tracker And
             Timesheet App That Lets You Track Work Hours Across Projects......
           </p>
-          <button className="btn">DISCOVER NOW</button>
+          <Link href={"#about"} className="btn flex items-center gap-2">
+            <span> DISCOVER NOW</span>
+            <span>
+              <Plane />
+            </span>
+          </Link>
         </div>
       </div>
-
       <div className="relative hidden md:block">
         <Image
           src={"/heroImg.png"}
@@ -31,7 +38,6 @@ const Hero = () => {
           See the world, <span className="text-orange">With us</span>
         </h1>
       </div>
-
       <div className="relative mt-6">
         <SearchBar />
       </div>

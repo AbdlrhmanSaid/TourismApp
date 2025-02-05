@@ -7,7 +7,7 @@ const Filter = () => {
   const filters = ["Special Deals", "Populer", "Recommendation", "Best Price"];
 
   return (
-    <div className=" text-center p-4 my-[20px]">
+    <div className=" text-center p-4 my-[20px] text-[13px] md:text-[16px]">
       <div className="flex justify-center space-x-8 px-4">
         {filters.map((filter) => (
           <div

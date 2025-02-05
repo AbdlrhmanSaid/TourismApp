@@ -82,7 +82,10 @@ const Places = () => {
         ))}
       </div>
       <div className="text-center mt-3">
-        <Link href={"/TourDestinations"} className="btn ">
+        <Link
+          href={"/TourDestinations"}
+          className="btn mt-8 mx-auto block w-fit"
+        >
           Tour Destinations
         </Link>
       </div>
