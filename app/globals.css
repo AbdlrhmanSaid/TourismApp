@@ -2,20 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .text-orange {
+    @apply text-[#FA7436];
   }
-}
+  .text-orange-fade {
+    @apply text-[#FA743680];
+  }
+  .text-black {
+    @apply text-[#22222273];
+  }
+  .text-gray-dark {
+    @apply text-[#444444];
+  }
+  .text-gray {
+    @apply text-[#666666];
+  }
+  .text-blue {
+    @apply text-[#4086F4];
+  }
+  .text-yellow {
+    @apply text-[#FFB60A];
+  }
+  .bg-orange {
+    @apply bg-[#FA7436];
+  }
+  .bg-orange-light {
+    @apply bg-[#fa74360c];
+  }
+  .bg-black {
+    @apply bg-[#222222];
+  }
+  .bg-gray-light {
+    @apply bg-[#E5E5E5];
+  }
+  .bg-white {
+    @apply bg-[#FFFCFB];
+  }
+  .bg-light {
+    @apply bg-[#F7F8FC];
+  }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .icon-gray {
+    @apply text-[#999999];
+  }
+  .icon-light {
+    @apply text-[#E5E5E5];
+  }
+  .active {
+    @apply text-orange;
+    border-bottom: solid 2px #fa7436;
+  }
+  .btn {
+    @apply bg-orange-500 text-white text-sm md:text-base px-6 py-3 rounded-lg shadow hover:bg-orange-600 transition;
+  }
+  /* تحسين شريط التمرير */
+  html {
+    scroll-behavior: smooth; /* اجعل التمرير سلسًا */
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px; /* عرض شريط التمرير */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px; /* زوايا مدورة */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* لون عند التمرير */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* لون الخلفية */
+  }
+
+  /* تحسين سرعة التمرير */
+  body {
+    overscroll-behavior: none; /* منع التأثيرات الغير مرغوبة عند التمرير */
+    scroll-behavior: smooth; /* التمرير السلس */
+  }
 }
