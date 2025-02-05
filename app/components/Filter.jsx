@@ -8,12 +8,12 @@ const Filter = () => {
 
   return (
     <div className=" text-center p-4 my-[20px]">
-      <div className="flex justify-center space-x-8">
+      <div className="flex justify-center space-x-8 px-4">
         {filters.map((filter) => (
           <div
             key={filter}
             onClick={() => setActiveFilter(filter)}
-            className={`cursor-pointer text-gray-600 relative ${
+            className={`cursor-pointer text-gray-600 relative  ${
               activeFilter === filter ? "text-black  font-bold" : ""
             }`}
           >
