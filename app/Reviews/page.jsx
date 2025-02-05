@@ -21,7 +21,7 @@ const page = () => {
         <Spinner />
       ) : (
         <div className="bg-[url('/plans.png')]">
-          <h1 className="text-3xl font-bold text-center my-8 ">Reviews</h1>
+          <h1 className="title">Reviews</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
             {reviews.map((review) => (
               <TestimonialCard

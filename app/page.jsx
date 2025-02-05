@@ -5,6 +5,7 @@ import Chooseus from "./components/Chooseus";
 import Gallery from "./components/Gallery";
 import Review from "./components/Review";
 import Blog from "./components/Blog";
+import TopBtn from "./components/TopBtn";
 export default function Home() {
   return (
     <>

@@ -25,9 +25,7 @@ export default function TourDestinations() {
   return (
     <>
       <div className="bg-[url('/plans.png')]">
-        <h1 className="text-3xl font-bold text-center my-8 bg-[url('/plans.png')]">
-          Tour Destinations
-        </h1>
+        <h1 className="title">Tour Destinations</h1>
         <div className="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {tours.map((tour) => (
             <div

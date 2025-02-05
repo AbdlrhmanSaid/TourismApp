@@ -3,6 +3,7 @@ import { Lato } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import TopBtn from "./components/TopBtn";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -16,9 +17,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${lato.className} antialiased`}>
+      <body className={`${lato.className} antialiased relative`}>
         <Navbar />
         {children}
+        <TopBtn />
         <Footer />
       </body>
     </html>

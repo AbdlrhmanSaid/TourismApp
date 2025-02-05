@@ -8,10 +8,10 @@ const TestimonialCard = ({ name, avatar, comment, rating }) => {
       return (
         <div className="flex">
           {[...Array(1)].map((_, index) => (
-            <Star key={index} className="h-5 w-5 text-yellow-500" />
+            <Star key={index} className="h-5 w-4 text-yellow-500" />
           ))}
           {[...Array(4)].map((_, index) => (
-            <Star key={index} className="h-5 w-5 text-black" />
+            <Star key={index} className="h-5 w-4 text-black" />
           ))}
         </div>
       );
@@ -19,10 +19,10 @@ const TestimonialCard = ({ name, avatar, comment, rating }) => {
       return (
         <div className="flex">
           {[...Array(2)].map((_, index) => (
-            <Star key={index} className="h-5 w-5 text-yellow-500" />
+            <Star key={index} className="h-5 w-4 text-yellow-500" />
           ))}
           {[...Array(3)].map((_, index) => (
-            <Star key={index} className="h-5 w-5 text-black" />
+            <Star key={index} className="h-5 w-4 text-black" />
           ))}
         </div>
       );
@@ -30,10 +30,10 @@ const TestimonialCard = ({ name, avatar, comment, rating }) => {
       return (
         <div className="flex">
           {[...Array(3)].map((_, index) => (
-            <Star key={index} className="h-5 w-5 text-yellow-500" />
+            <Star key={index} className="h-5 w-4 text-yellow-500" />
           ))}
           {[...Array(2)].map((_, index) => (
-            <Star key={index} className="h-5 w-5 text-black" />
+            <Star key={index} className="h-5 w-4 text-black" />
           ))}
         </div>
       );
@@ -41,16 +41,16 @@ const TestimonialCard = ({ name, avatar, comment, rating }) => {
       return (
         <div className="flex">
           {[...Array(4)].map((_, index) => (
-            <Star key={index} className="h-5 w-5 text-yellow-500" />
+            <Star key={index} className="h-5 w-4 text-yellow-500" />
           ))}
-          <Star className="h-5 w-5 text-black" />
+          <Star className="h-5 w-4 text-black" />
         </div>
       );
     } else if (rating >= 100000) {
       return (
         <div className="flex">
           {[...Array(5)].map((_, index) => (
-            <Star key={index} className="h-5 w-5 text-yellow-500" />
+            <Star key={index} className="h-5 w-4 text-yellow-500" />
           ))}
         </div>
       );
@@ -61,11 +61,10 @@ const TestimonialCard = ({ name, avatar, comment, rating }) => {
         </div>
       );
     }
-    return null;
   };
 
   return (
-    <div className="max-w-sm mx-auto bg-white shadow-lg rounded-xl p-6">
+    <div className="max-w-sm mx-auto bg-white shadow-lg rounded-xl p-6 flex flex-col justify-between">
       <p className="text-gray-600 mb-4">{comment}</p>
       <div className="flex items-center">
         <img

@@ -56,31 +56,32 @@
   .btn {
     @apply bg-orange-500 text-white text-sm md:text-base px-6 py-3 rounded-lg shadow hover:bg-orange-600 transition;
   }
-  /* تحسين شريط التمرير */
   html {
-    scroll-behavior: smooth; /* اجعل التمرير سلسًا */
+    scroll-behavior: smooth;
   }
 
   ::-webkit-scrollbar {
-    width: 8px; /* عرض شريط التمرير */
+    width: 8px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 4px; /* زوايا مدورة */
+    background: #fa7436;
+    border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* لون عند التمرير */
+    background: #fa7436b7;
   }
 
   ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* لون الخلفية */
+    background: #f1f1f1;
   }
 
-  /* تحسين سرعة التمرير */
   body {
-    overscroll-behavior: none; /* منع التأثيرات الغير مرغوبة عند التمرير */
-    scroll-behavior: smooth; /* التمرير السلس */
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+  }
+  .title {
+    @apply text-3xl font-bold text-center mb-8 border-b-2 w-fit m-auto border-orange-600;
   }
 }

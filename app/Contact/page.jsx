@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 const Contact = () => {
   return (
     <div className="py-12 px-6 lg:px-24">
-      <h1 className="text-3xl font-bold text-center mb-8">Contact Us</h1>
+      <h1 className="title">Contact Us</h1>
       <p className="text-center text-gray-600 mb-8">
         Have questions or want to get in touch? We'd love to hear from you!
       </p>
