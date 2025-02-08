@@ -64,7 +64,7 @@ const TestimonialCard = ({ name, avatar, comment, rating }) => {
   };
 
   return (
-    <div className="max-w-sm mx-auto bg-white shadow-lg rounded-xl p-6 flex flex-col justify-between">
+    <div className="max-w-sm mx-auto bg-white shadow-lg rounded-xl p-6 flex flex-col justify-between hover:shadow-xl transition">
       <p className="text-gray-600 mb-4">{comment}</p>
       <div className="flex items-center">
         <img

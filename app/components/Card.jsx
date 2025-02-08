@@ -3,7 +3,7 @@ import { MapPin, Star } from "lucide-react";
 
 const Card = ({ img, country, text, time, price, more = true }) => {
   return (
-    <div className="w-full mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+    <div className="w-full mx-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
       <img src={img} alt="Tour Image" className="w-full h-48 object-cover" />
       <div className="p-4">
         <div className="flex justify-between items-center mb-2">

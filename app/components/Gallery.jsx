@@ -14,7 +14,7 @@ const Gallery = () => {
             alt="photo"
             width={400}
             height={400}
-            className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
+            className="w-full h-full object-cover  transition duration-300"
           />
         </div>
         <div className="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
@@ -23,7 +23,7 @@ const Gallery = () => {
             alt="photo"
             width={400}
             height={400}
-            className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
+            className="w-full h-full object-cover  transition duration-300"
           />
         </div>
         <div className="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
@@ -32,7 +32,7 @@ const Gallery = () => {
             alt="photo"
             width={400}
             height={400}
-            className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
+            className="w-full h-full object-cover  transition duration-300"
           />
         </div>
       </div>
